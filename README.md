@@ -1,2 +1,2 @@
 # Estudos
-Estudos de GIT 
+Estudos
