@@ -19,14 +19,7 @@ SELECT
     , SUM(mensagens) AS total_mensagens
     , SUM(if(classificacao_minuto = "Pré-Jogo", mensagens,null)) AS total_mensagens_pre_jogo
     , SUM(if(classificacao_minuto = "Em Andamento", mensagens,null)) AS total_mensagens_em_andamento
-    , SUM(if(classificacao_minuto = "Pós-Jogo", mensagens,null)) AS total_mensagens_pos_jogo
-
-    , SUM(reacoes) AS total_reacoes
-    , SUM(if(classificacao_minuto = "Pré-Jogo", reacoes,null)) AS total_reacoes_pre_jogo
-    , SUM(if(classificacao_minuto = "Em Andamento", reacoes,null)) AS total_reacoes_em_andamento
-    , SUM(if(classificacao_minuto = "Pós-Jogo", reacoes,null)) AS total_reacoes_pos_jogo
-
-    , SUM(envolvimentos) AS total_envolvimentos
+    , SUM(if(classificacao_minuto = "Pós-Jogo", mensagens,null)) AS total_mensagens_pos_jog
     , DATETIME(CURRENT_TIMESTAMP(), "America/Sao_Paulo") AS insert_date
   FROM 
    `data-analytics-422617.gold_layer.youtube_lives_por_minuto` 
